@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/*//////////////////////////////////////*/
+
+
+/*Main*/
+
+:root {
+    --accent: #d16e8d;
+    --title-primary: #ee6352;
+    --title-secondary: #d16e8d;
+    --title-color: #F7F7FF;
+    --title-gradient: linear-gradient(-90deg, var(--title-primary), var(--title-secondary));
+    --color-primary: #d6d6d6;
+    --background-primary: #151515;
+    --background-secondary: #242424;
+    --background-tertiary: #383838;
+    --background-quaternary: #656565;
+    --box-shadow: 4px 3px 8px 1px #101010;
+    --text-shadow: 4px 3px #050505;
+    --input-border: 1px solid #444;
+    --input-border-accent: 1px solid #d16e8d;
+    --input-border-radius: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--background-primary);
+}
+
+section {
+    padding: 100px;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    background: var(--background-tertiary);
+    color: var(--color-primary);
+    border: none;
+    outline: none;
+    float: left;
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--background-quaternary);
+}
+
+button:active {
+    cursor: pointer;
+    background: var(--background-tertiary);
+}
+
+.button-selected {
+    background: var(--accent);
+}
+
+h1 {
+    text-shadow: var(--text-shadow);
+}
+
+h2 {
+    text-shadow: var(--text-shadow);
+}
+
+h3 {
+    text-shadow: var(--text-shadow);
+}
+
+h4 {
+    text-shadow: var(--text-shadow);
+}
+
+p {
+    text-shadow: var(--text-shadow);
+}
+
+
+/*//////////////////////////////////////*/
+
+
+/*ScrollBar*/
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #202020;
+}
+
+
+/*//////////////////////////////////////*/
+
+
+/*Banner*/
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em 0 2em;
+    margin: 0;
+    color: var(--title-color);
+    background: var(--title-gradient);
+    position: relative;
+    z-index: 900;
+    height: 40rem;
+    text-shadow: 3px 5px 10px rgba(0, 0, 0, .2);
+    clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+}
+
+.title h1 {
+    font-size: 3rem;
+    padding-top: 10rem;
+}
+
+
+/*//////////////////////////////////////*/
+
+
+/*About*/
+
+.about {
+    background: var(--background-primary);
+    color: var(--color-primary);
+}
+
+.about .heading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+/*//////////////////////////////////////*/
+
+
+/*Marketplace*/
+
+.marketplace {
+    background: var(--background-secondary);
+    color: var(--color-primary);
+}
+
+.marketplace .heading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.marketplace ul {
+    margin-bottom: 1em;
+    list-style: none;
+    display: flex;
+}
+
+.marketplace ul li {
+    gap: 2em;
+}
+
+.marketplace .grid {
+    margin-bottom: 1em;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2em;
+    grid-auto-columns: 1fr;
+}
+
+@media (min-width: 45em) {
+    .marketplace .grid {
+        grid-auto-flow: column;
+    }
+}
+
+.marketplace .grid .item {
+    background: var(--background-tertiary);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    border-color: var(--background-tertiary);
+    border-style: solid;
+    border-width: 2px;
+    height: 350px;
+}
+
+.marketplace .grid .item:hover {
+    border-color: var(--accent);
+    border-style: solid;
+}
+
+.marketplace .grid .item h2 {
+    text-shadow: none;
+}
+
+.marketplace .grid .item h3 {
+    color: var(--accent);
+    text-shadow: none;
+}
+
+.marketplace .grid .item p {
+    text-shadow: none;
+}
+
+
+/*//////////////////////////////////////*/
+
+
+/*Blog*/
+
+.blog {
+    background: var(--background-primary);
+    color: var(--color-primary);
+}
+
+.blog .heading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+/*//////////////////////////////////////*/
+
+
+/*Contact*/
+
+.contact {
+    background: var(--background-secondary);
+    color: var(--color-primary);
+}
+
+.contact .heading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact .contact-box {
+    margin: 0 auto;
+    width: 100%;
+    padding: 25px;
+}
+
+.contact form {
+    margin: 0 auto;
+    outline: none;
+    resize: none;
+}
+
+.contact input {
+    width: 33%;
+    height: 40px;
+    padding-left: 10px;
+    background: var(--background-primary);
+    color: var(--color-primary);
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    outline: none;
+}
+
+.contact input:focus {
+    border: var(--input-border-accent);
+}
+
+.contact textarea {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background: var(--background-primary);
+    color: var(--color-primary);
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    resize: none;
+    outline: none;
+}
+
+.contact textarea:focus {
+    border: var(--input-border-accent);
+}
+
+.contact h4 {
+    color: var(--accent);
+    margin: 3px;
+}

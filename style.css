@@ -30,6 +30,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html,
 body {
     background: var(--background-primary);
     overflow-x: hidden;
@@ -129,7 +130,7 @@ p {
 }
 
 .title h1 {
-    font-size: 34px;
+    font-size: 24px;
     padding-top: 10rem;
 }
 

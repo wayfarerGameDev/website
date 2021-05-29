@@ -32,7 +32,7 @@
 
 body {
     background: var(--background-primary);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 section {
@@ -131,7 +131,6 @@ p {
 .title h1 {
     font-size: 12px;
     padding-top: 10rem;
-    color: red;
 }
 
 
